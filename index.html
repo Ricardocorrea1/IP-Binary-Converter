@@ -1,9 +1,9 @@
-<html lang="en"">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial=scale=1.0" />
     <title>IP/Binary Converter</title>
-    <link rel="stylesheet" href=""
+    <link href="#" rel="stylesheet" />
 </head>
 <body>
     <h1>IP/Binary Converter</h1>
@@ -11,8 +11,72 @@
 
 
     <h2>How to convert an IP address to Binary</h2>
+    <p>
+        An IP address (32-bit) is divided into four octets. IP addresses are in dotted decimal, meaning that each octet (8 bits) is represented by a number between 0 and 255.
+        So, the maximum binary number for an octet would be 11111111.For example, 255.255.255.255 converted to binary would be 11111111.11111111.11111111.11111111
+    </p>
+    <h3>But how would you do this?</h3>
+    <p>First is to start with one decimal value like 127 in 127.0.0.1</p>
+    <table style="width:auto">
+        <tr>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 
+    <p>
+     In this conversion table, start with the number 128 and subtract it from your decimal number. If it doesn't fit,
+     you leave the binary number 0 and go with the number.In this case, 64 can be subtracted from 127, making the binary number 1
+     and leaving the decimal at 63. Next, 32 can subtract to 63, making the binary number 1 and leaving 31.
+     You continue the process until your decimal value is 0.
+    </p>
 
+    <table style="width:auto">
+        <tr>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <p>
+        Continue the prcess with the next octet which is decimal value 0.
+        At the end, 127.0.0.1 converted to binary would be 01111111.00000000.00000000.00000001
+    </p>
+
+    <!--
     <h2>How to convert Binary to an IP address</h2>
+     -->
 </body>
 </html>
