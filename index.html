@@ -21,7 +21,7 @@
         An IP address (32-bit) is divided into four octets. IP addresses are in dotted decimal, meaning that each octet (8 bits) is represented by a number between 0 and 255.
         So, the maximum binary number for an octet would be 11111111.For example, 255.255.255.255 converted to binary would be 11111111.11111111.11111111.11111111
     </p>
-    <h3>But how would you do this?</h3>
+    <h3>But how do we convert Decimal to Binary?</h3>
     <p>First is to start with one decimal value like 127 in 127.0.0.1</p>
     
     <p>Decimal value: 127</p>
@@ -50,10 +50,10 @@
     </table>
 
     <p>
-     In this conversion table, start with the number 128 and subtract it from your decimal number. If it doesn't fit,
+     In this conversion table, start with the number 128 and subtract it from your decimal value. If it doesn't fit,
      you leave the binary number 0 and go the next number. In this case, 64 can be subtracted from 127, making the binary number 1
      and leaving the decimal at 63. Next, 32 can subtract to 63, making the binary number 1 and leaving 31.
-     You continue the process until your decimal value is 0.
+     You continue the process until you reach 0.
     </p>
 
     <p>Decimal value: 127</p>
@@ -81,8 +81,8 @@
     </table>
 
     <p>
-        Continue the process with the next octet, which is the decimal value 0. In the end, 127.0.0.1 
-        converted to binary would be 01111111.00000000.00000000.00000001
+     So, we get 01111111 as our first binary number in the conversion. Continue the process with the next octet, which is the decimal value 0. 
+     In the end, 127.0.0.1 converted to binary would be 01111111.00000000.00000000.00000001
     </p>
 
     <!--
