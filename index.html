@@ -4,6 +4,12 @@
     <meta name="viewport" content="width=device-width, initial=scale=1.0" />
     <title>IP/Binary Converter</title>
     <link href="#" rel="stylesheet" />
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
     <h1>IP/Binary Converter</h1>
@@ -17,7 +23,10 @@
     </p>
     <h3>But how would you do this?</h3>
     <p>First is to start with one decimal value like 127 in 127.0.0.1</p>
-    <table style="width:auto">
+    
+    <p>Decimal value: 127</p>
+    <table style="width: 20%">
+        
         <tr>
             <td>128</td>
             <td>64</td>
@@ -29,25 +38,26 @@
             <td>1</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
     </table>
 
     <p>
      In this conversion table, start with the number 128 and subtract it from your decimal number. If it doesn't fit,
-     you leave the binary number 0 and go with the number.In this case, 64 can be subtracted from 127, making the binary number 1
+     you leave the binary number 0 and go the next number. In this case, 64 can be subtracted from 127, making the binary number 1
      and leaving the decimal at 63. Next, 32 can subtract to 63, making the binary number 1 and leaving 31.
      You continue the process until your decimal value is 0.
     </p>
 
-    <table style="width:auto">
+    <p>Decimal value: 127</p>
+    <table style="width:20%">
         <tr>
             <td>128</td>
             <td>64</td>
@@ -71,8 +81,8 @@
     </table>
 
     <p>
-        Continue the prcess with the next octet which is decimal value 0.
-        At the end, 127.0.0.1 converted to binary would be 01111111.00000000.00000000.00000001
+        Continue the process with the next octet, which is the decimal value 0. In the end, 127.0.0.1 
+        converted to binary would be 01111111.00000000.00000000.00000001
     </p>
 
     <!--
