@@ -1,5 +1,18 @@
- x = 1
-y = 1
+$(".inputBox").keyup(function () {
+    if (this.value.length == this.maxLength) {
+      //$(this).next('.inputBox').focus();
+      //$(this).parentElement.nextElementSibling.firstElementChild.focus();
+      var e = event || window.event;  
+      var key = e.keyCode || e.which;  
+         if (key == 96 || key == 97 || key == 49 || key == 48 || key == 39 || key == 13) {
+      x = parseInt(this.id);
+      y = 2;
+      document.getElementById(x+1).focus(); 
+//      document.getElementById(y+1).value = x+1;
+         }
+    }
+});
+
 
 function convertIP() {
 
@@ -51,3 +64,12 @@ function convertIP() {
    document.getElementById("output").innerHTML = "IP -> Binary: " + IPValue[0] + "." + IPValue[1] + "." + IPValue[2] + "." + IPValue[3];
 //    document.getElementById("output").innerHTML = "IP -> Binary: "+ IPValue[0];
 }
+
+function checkValue(target) {
+   var e = event || window.event;  
+   var key = e.keyCode || e.which;                              
+   if (key != 8 && key != 37 && key != 9 && key != 46 && key != 49 && key != 48 && key != 96 && key != 97) { 
+           if (e.preventDefault) e.preventDefault(); 
+           e.returnValue = false; 
+   }
+ }  
