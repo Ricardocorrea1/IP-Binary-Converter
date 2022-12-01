@@ -9,17 +9,15 @@ $(".inputBox").keyup(function () {
       y = 2;
       document.getElementById(x+1).focus(); 
 //      document.getElementById(y+1).value = x+1;
+      convertIP();
          }
+       }
     }
-});
+);
 
 
 function convertIP() {
-
-
-
     //var BinaryValueVar = document.getElementsByName('BinaryValue1')[0].value
-
     var BinaryValueVar1 = document.getElementById("inputTable1").rows[1].cells;
     var BinaryValueVar2 = document.getElementById("inputTable2").rows[1].cells;
     var BinaryValueVar3 = document.getElementById("inputTable3").rows[1].cells;
@@ -28,9 +26,7 @@ function convertIP() {
     i = 0;
 
     const BinaryValue = [BinaryValueVar1, BinaryValueVar2, BinaryValueVar3, BinaryValueVar4];
-
     const IPValue = [0, 0, 0, 0];
-
   
     while (i < 4) {
         if (BinaryValue[i][0].children[0].value == "1") {
@@ -72,4 +68,5 @@ function checkValue(target) {
            if (e.preventDefault) e.preventDefault(); 
            e.returnValue = false; 
    }
+  convertIP();
  }  
