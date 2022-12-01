@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial=scale=1.0" />
     <title>IP/Binary Converter</title>
     <link href="css.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <style>
         table, th, td {
             border: 1px solid black;
@@ -95,7 +96,7 @@
     <h2>How to convert Binary to an IP address</h2>
      -->
     
-	<script src="calculator.js"></script>
+
     <!-- Testing code-->
 <table align = "center" style="width:50%"><tr><td>
 
@@ -113,14 +114,15 @@
         </tr>
         </thead>
         <tr>
-            <td><input type="text" size="1" style= "width:100%" placeholder="?" pattern="[ABC]" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
+            <td><input class = "inputBox" id = "1" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "2" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "3" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "4" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "5" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "6" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "7" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "8" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+
         </tr>
     </table>
   </td><td>
@@ -138,15 +140,14 @@
         </tr>
         </thead>
         <tr>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-
+            <td><input class = "inputBox" id = "9" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "10" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "11" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "12" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "13" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "14" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "15" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "16" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
         </tr>
     </table>
     </td>
@@ -165,15 +166,15 @@
         </tr>
         </thead>
         <tr>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-        </tr>
+            <td><input class = "inputBox" id = "17" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "18" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "19" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "20" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "21" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "22" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "23" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "24" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+         </tr>
     </table>
     </td>
   <td>
@@ -191,15 +192,15 @@
         </tr>
         </thead>
         <tr>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-            <td><input type="text" size="1" style= "width:100%" maxlength = "1" value = "1"/></td>
-        </tr>
+            <td><input class = "inputBox" id = "25" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "26" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "27" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "28" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "29" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "30" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "31" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+            <td><input class = "inputBox" id = "32" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "1" onKeyDown="checkValue()" value = "1"/></td>
+         </tr>
     </table>
     </td>
   </tr>
@@ -219,5 +220,6 @@
 
 <p id="output"></p>
 <br><br><br><br>
+<script src="calculator.js"></script>
 </body>
 </html>
