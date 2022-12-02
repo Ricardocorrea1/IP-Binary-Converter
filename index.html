@@ -210,17 +210,40 @@
     <thead>
     <tr>
             <th>Bits in Host</th>
-            <th>Bits in Subnet</th>
+            <th>Bits in Subnet*</th>
     </tr>
     </thead>
     <tr>
-    <td><input class = "inputBox" id = "33" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "2" onKeyDown="checkValue()" value = "8" /></td>
-    <td><input class = "inputBox" id = "34" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "2" onKeyDown="checkValue()" value = "4"/></td>
+    <td><input class = "inputBox" id = "33" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "2" value = "8" /></td>
+
+    <td><input class = "inputBox" id = "34" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "2" value = "0"/></td>
     </tr>
   </table>
 
+<p id="output" class="Joker" style="text-align:center">
+  Given IP: 255.255.255.255/24<br>
+<br>
+Shortform IP: 255.255.255.255/24<br>
+Broadcast IP: 255.255.255.255<br>
+First usable IP on Network: 255.255.255.1<br>
+Last usable IP on Network: 255.255.255.254<br>
+<br>
+Subnet Mask: 255.255.255.0<br>
+<br>
+Network Address: 255.255.255.0<br>
+Subnet Broadcast IP: 255.255.255.255<br>
+First Valid IP on Subnet: 255.255.255.1<br>
+Last Valid IP: on Subnet:255.255.255.254<br>
+<br>
+Subnets Created: 1<br>
+Host Bits Per Subnet: 8<br>
+Total Hosts: 256<br>
+Usable Hosts: 254<br>
+<br>
+Hosts lost in Subnetting: 0<br>
+Total Hosts without Subnetting: 256<br>
+</p>
 
-<p id="output" class="Joker" style="text-align:center">Given IP: 255.255.255.255/24</p>
 
 <!--<input type="text" name="BinaryValue1" value="00000001">
 <input type="text" name="BinaryValue2" value="00000011">
@@ -229,9 +252,10 @@
 
 
 <br><br> 
-
+* - If unsure, leave at 0
 <!--<button onclick="convertIP()">Convert Binary to IP</button>-->
 <br><br><br><br>
 <script src="calculator.js"></script>
 </body>
 </html>
+
