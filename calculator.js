@@ -39,10 +39,17 @@ function convertIP() {
     var subfirstIP = [0, 0, 0, 0];
     var sublastIP = [0, 0, 0, 0];
   
-    hostBits = document.getElementById(33).value;
-    subnetBits = document.getElementById(34).value;
-    resultBits = hostBits-subnetBits;
+    var hostBits = document.getElementById(33).value;
+    var subnetBits = document.getElementById(34).value;
+    var resultBits = hostBits-subnetBits;
     
+    var subnets = Math.pow(2, subnetBits);
+    var bitsPerSubnet = resultBits;
+    var totalHosts = Math.pow(2, resultBits);
+    var usableHosts =  totalHosts - 2;
+    var lostHosts = Math.pow(2, hostBits) - totalHosts
+    
+
     
     while (i < 4) {
       //128
@@ -165,7 +172,15 @@ function convertIP() {
 "Network Address: "  + networkAddress[0] + "." + networkAddress[1] + "." + networkAddress[2] + "." + networkAddress[3] + "<br>" + 
 "Subnet Broadcast IP: "  + subbroadIP[0] + "." + subbroadIP[1] + "." + subbroadIP[2] + "." + subbroadIP[3] + "<br>" + 
 "First Valid IP on Subnet: "+ subfirstIP[0] + "." + subfirstIP[1] + "." + subfirstIP[2] + "." + subfirstIP[3] + "<br>" + 
-"Last Valid IP: on Subnet:" + sublastIP[0] + "." + sublastIP[1] + "." + sublastIP[2] + "." + sublastIP[3] + "<br>"
+"Last Valid IP: on Subnet:" + sublastIP[0] + "." + sublastIP[1] + "." + sublastIP[2] + "." + sublastIP[3] + "<br><br>" + 
+     
+     "Subnets Created: " + subnets + "<br>" +
+     "Host Bits Per Subnet: "+ bitsPerSubnet + "<br>" + 
+     "Total Hosts: " + totalHosts + "<br>" + 
+     "Usable Hosts: " + usableHosts + "<br><br>" + 
+     "Hosts lost in Subnetting: " + lostHosts + "<br>" + 
+     "Total Hosts <b>without</b> Subnetting: " + (lostHosts + totalHosts)
+     
      ;
   
   
