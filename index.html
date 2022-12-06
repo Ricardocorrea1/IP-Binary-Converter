@@ -98,6 +98,7 @@
     
 
     <!-- Testing code-->
+  <h3 id = "Joker2" align="center">Binary -> IP</h3>
 <table align = "center" style="width:50%"><tr><td>
 
       <table style="width:20%" class = Royal id="inputTable1">
@@ -205,6 +206,60 @@
     </td>
   </tr>
   </table>
+  
+    <br>
+    <h3 id = "Joker2" align="center">IP -> Binary</h3>
+<table align = "center" style="width:50%"><tr><td>
+
+      <table style="width:80%" class = Royal id="inputTable1">
+      <thead>  
+      <tr>
+            <th>IP Part 1</th>
+
+        </tr>
+        </thead>
+        <tr>
+            <td><input class = "inputBox2" id = "101" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "3" onKeyDown="checkValue2(this)" value = "255"/></td>
+        </tr>
+    </table>
+
+  </td><td>
+        <table style="width:80%" class = Royal id="inputTable2">
+      <thead>  
+      <tr>
+            <th>IP Part 2</th>
+        </tr>
+        </thead>
+        <tr>
+            <td><input class = "inputBox2" id = "102" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "3" onKeyDown="checkValue2(this)" value = "255"/></td>
+        </tr>
+    </table>
+    </td>
+  <td>
+        <table style="width:80%" class = Royal id="inputTable3">
+      <thead>  
+      <tr>
+            <th>IP Part 3</th>
+        </tr>
+        </thead>
+        <tr>
+          <td><input class = "inputBox2" id = "103" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "3" onKeyDown="checkValue2(this)" value = "255"/></td>
+        </tr>
+    </table>
+    </td>
+  <td>
+        <table style="width:80%" class = Royal id="inputTable4">
+      <thead>  
+      <tr>
+            <th>IP Part 4</th>
+        </tr>
+        </thead>
+        <tr>
+            <td><input class = "inputBox2" id = "104" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "3" onKeyDown="checkValue2(this)" value = "255"/></td>         </tr>
+    </table>
+    </td>
+  </tr>
+  </table>
 <br>
   <table align = "center" style="width:50%" class = "Royal">
     <thead>
@@ -214,11 +269,11 @@
     </tr>
     </thead>
     <tr>
-    <td><input class = "inputBox" id = "33" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "2" value = "8" /></td>
-
-    <td><input class = "inputBox" id = "34" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "2" value = "0"/></td>
+    <td><input class = "inputBox3" id = "33" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "2" onKeyDown="checkValue3(this)" value = "8" /></td>
+    <td><input class = "inputBox3" id = "34" type="text" onfocus="this.select();" onmouseup="return false;" size="1" style= "width:100%" maxlength = "2" onKeyDown="checkValue3(this)" value = "0"/></td>
     </tr>
   </table>
+
 
 <p id="output" class="Joker" style="text-align:center">
   Given IP: 255.255.255.255/24<br>
@@ -243,8 +298,6 @@ Usable Hosts: 254<br>
 Hosts lost in Subnetting: 0<br>
     Total Hosts <b>without</b> Subnetting: 256<br>
 </p>
-
-
 <!--<input type="text" name="BinaryValue1" value="00000001">
 <input type="text" name="BinaryValue2" value="00000011">
 <input type="text" name="BinaryValue3" value="00000111">
@@ -258,4 +311,3 @@ Hosts lost in Subnetting: 0<br>
 <script src="calculator.js"></script>
 </body>
 </html>
-
